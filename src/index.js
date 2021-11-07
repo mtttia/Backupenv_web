@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
+import './style/custom.scss'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from '@mui/material/styles';
+import Palette from './palette'
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    
+    <ThemeProvider theme={Palette}>
+      <App />
+    </ThemeProvider>      
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

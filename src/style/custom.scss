@@ -1,0 +1,30 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+$background: #fff;
+$primary:#006D77;
+$secondary:#83C5BE;
+$secondary-opacity: #83c5bf33;
+
+body{
+  background-color: $background;
+  height: 100%;
+  // position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  // overflow: scroll;
+}
+
+.h-max{
+  min-height: 100%;
+}
+
+.link-in-nav:hover{
+  color: #000;
+}
+
+a:hover{
+  color: unset !important;
+  text-decoration: none;
+}
