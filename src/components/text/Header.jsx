@@ -1,4 +1,3 @@
-import { PowerOffSharp } from '@mui/icons-material';
 import './Header.scss';
 
 export default function Header(props){

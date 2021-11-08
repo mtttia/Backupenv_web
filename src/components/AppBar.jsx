@@ -11,12 +11,12 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home'
 import GavelIcon from '@mui/icons-material/Gavel';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { download } from './../util'
+import { Link } from 'react-router-dom';
 import './AppBar.scss'
 
 export default function ButtonAppBar() {
@@ -40,36 +40,36 @@ export default function ButtonAppBar() {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        <ListItemLink href="/home" button>
+        <ListItemLink to="/home" button>
           <ListItemIcon>
             <HomeIcon color={window.location.pathname == '/home'? 'primary':''} />
           </ListItemIcon>
           <ListItemText className={"link-in-nav " + (window.location.pathname == '/home' ? 'linked':'MERDA')} primary="Home"/>          
         </ListItemLink>
-        <ListItemLink href="/howWork" button>
+        <ListItemLink to="/howWork" button>
           <ListItemIcon>
             <GavelIcon color={window.location.pathname == '/howWork'? 'primary':''}/>
           </ListItemIcon>
           <ListItemText className={"link-in-nav " + (window.location.pathname == '/howWork'? 'linked':'')} primary="Come funziona"/>          
         </ListItemLink>
-        <ListItemLink href="/tecnology" button>
+        <ListItemLink to="/tecnology" button>
           <ListItemIcon>
             <BiotechIcon color={window.location.pathname == '/tecnology'? 'primary':''}/>
           </ListItemIcon>
           <ListItemText className={"link-in-nav " + (window.location.pathname == '/tecnology'? 'linked':'')} primary="Tecnologie utilizzate"/>  
         </ListItemLink>
-        <ListItemLink href="https://github.com/mtttia/backup_env" target="_black" button>
+        <ListItem component="a" href="https://github.com/mtttia/backup_env" target="_black" button>
           <ListItemIcon>
             <GitHubIcon />
           </ListItemIcon>
           <ListItemText className="link-in-nav" primary="Github del progetto"/>          
-        </ListItemLink>
-        <ListItemLink href="https://github.com/mtttia" target="_black" button>
+        </ListItem>
+        <ListItem component="a" href="https://github.com/mtttia" target="_black" button>
           <ListItemIcon>
             <GitHubIcon />
           </ListItemIcon>
           <ListItemText className="link-in-nav" primary="Github dell'autore"/>
-        </ListItemLink>
+        </ListItem>
         
       </List>
     </Box>
@@ -106,5 +106,5 @@ export default function ButtonAppBar() {
 }
 
 function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
+  return <ListItem button component={Link} {...props} />;
 }

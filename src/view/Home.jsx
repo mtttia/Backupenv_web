@@ -9,6 +9,7 @@ import { download } from '../util';
 import Lock from './../asset/img/lock.png'
 import Gui from './../asset/img/gui.png'
 import MyCard from '../components/MyCard';
+import { Link } from 'react-router-dom';
 
 export default class Home extends React.Component{
 
@@ -36,7 +37,7 @@ function Welcome(props) {
         Download
       </Button>
       <div className='spacer'></div>
-      <Button variant="outlined" color="primary" component="a" href="/howWork" startIcon={<LightbulbIcon />}>
+      <Button variant="outlined" color="primary" component={Link} to="/howWork" startIcon={<LightbulbIcon />}>
         Come funziona
       </Button>
     </div>

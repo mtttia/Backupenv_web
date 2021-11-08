@@ -13,13 +13,13 @@ import HowWork from './view/HowWork'
 class App extends Component {
   render() {
     return (
-      
+      <Router>
         <div className="App h-max">
           <nav>
             <AppBar />
           </nav>
           <div className='h-max'>
-            <Router>
+            
             <Switch>
               <Route exact path="/">
                 <Redirect to="/home"></Redirect>
@@ -27,11 +27,10 @@ class App extends Component {
               <Route path="/home" component={Home} />
               <Route path="/howWork" component={HowWork} />
               <Route path="/tecnology" component={Tecnology} />
-            </Switch>
-            </Router>
+            </Switch>            
           </div>
         </div>
-      
+      </Router>
   );
   }
 }
