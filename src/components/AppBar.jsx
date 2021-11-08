@@ -15,7 +15,9 @@ import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home'
 import GavelIcon from '@mui/icons-material/Gavel';
 import BiotechIcon from '@mui/icons-material/Biotech';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { download } from './../util'
+import './AppBar.scss'
 
 export default function ButtonAppBar() {
   const [state, setState] = React.useState({
@@ -40,21 +42,33 @@ export default function ButtonAppBar() {
       <List>
         <ListItemLink href="/home" button>
           <ListItemIcon>
-            <HomeIcon />
+            <HomeIcon color={window.location.pathname == '/home'? 'primary':''} />
           </ListItemIcon>
-          <ListItemText className="link-in-nav" primary="Home"/>          
+          <ListItemText className={"link-in-nav " + (window.location.pathname == '/home' ? 'linked':'MERDA')} primary="Home"/>          
         </ListItemLink>
         <ListItemLink href="/howWork" button>
           <ListItemIcon>
-            <GavelIcon />
+            <GavelIcon color={window.location.pathname == '/howWork'? 'primary':''}/>
           </ListItemIcon>
-          <ListItemText className="link-in-nav" primary="Come funziona"/>          
+          <ListItemText className={"link-in-nav " + (window.location.pathname == '/howWork'? 'linked':'')} primary="Come funziona"/>          
         </ListItemLink>
         <ListItemLink href="/tecnology" button>
           <ListItemIcon>
-            <BiotechIcon />
+            <BiotechIcon color={window.location.pathname == '/tecnology'? 'primary':''}/>
           </ListItemIcon>
-          <ListItemText className="link-in-nav" primary="Tecnologie utilizzate"/>          
+          <ListItemText className={"link-in-nav " + (window.location.pathname == '/tecnology'? 'linked':'')} primary="Tecnologie utilizzate"/>  
+        </ListItemLink>
+        <ListItemLink href="https://github.com/mtttia/backup_env" target="_black" button>
+          <ListItemIcon>
+            <GitHubIcon />
+          </ListItemIcon>
+          <ListItemText className="link-in-nav" primary="Github del progetto"/>          
+        </ListItemLink>
+        <ListItemLink href="https://github.com/mtttia" target="_black" button>
+          <ListItemIcon>
+            <GitHubIcon />
+          </ListItemIcon>
+          <ListItemText className="link-in-nav" primary="Github dell'autore"/>
         </ListItemLink>
         
       </List>

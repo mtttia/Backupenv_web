@@ -11,6 +11,7 @@ import Gui from './../asset/img/gui.png'
 import MyCard from '../components/MyCard';
 
 export default class Home extends React.Component{
+
   render() {
     return <div className="home h-max">
       <div className="container">
@@ -35,7 +36,7 @@ function Welcome(props) {
         Download
       </Button>
       <div className='spacer'></div>
-      <Button variant="outlined" color="primary" component="" href="/tecnology" startIcon={<LightbulbIcon />}>
+      <Button variant="outlined" color="primary" component="a" href="/howWork" startIcon={<LightbulbIcon />}>
         Come funziona
       </Button>
     </div>
