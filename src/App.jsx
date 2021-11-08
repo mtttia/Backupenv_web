@@ -9,7 +9,6 @@ import {
 import Home from './view/Home'
 import Tecnology from './view/Tecnology'
 import HowWork from './view/HowWork'
-import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -31,9 +30,6 @@ class App extends Component {
             </Switch>
             </Router>
           </div>
-          <footer>
-            <Footer />
-          </footer>    
         </div>
       
   );
